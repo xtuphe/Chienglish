@@ -14,6 +14,7 @@
 		4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367A22AE67FC0040FF0D /* LaunchScreen.storyboard */; };
 		4DC7368722AE67FC0040FF0D /* ChienglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7368622AE67FC0040FF0D /* ChienglishTests.swift */; };
 		4DC7369222AE67FC0040FF0D /* ChienglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7369122AE67FC0040FF0D /* ChienglishUITests.swift */; };
+		4DC736A022B1ED7E0040FF0D /* WordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7369F22B1ED7E0040FF0D /* WordTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4DC7368D22AE67FC0040FF0D /* ChienglishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChienglishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC7369122AE67FC0040FF0D /* ChienglishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChienglishUITests.swift; sourceTree = "<group>"; };
 		4DC7369322AE67FC0040FF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC7369F22B1ED7E0040FF0D /* WordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				4DC7367122AE67FA0040FF0D /* AppDelegate.swift */,
 				4DC7367322AE67FA0040FF0D /* ViewController.swift */,
+				4DC7369F22B1ED7E0040FF0D /* WordTextView.swift */,
 				4DC7367522AE67FA0040FF0D /* Main.storyboard */,
 				4DC7367822AE67FC0040FF0D /* Assets.xcassets */,
 				4DC7367A22AE67FC0040FF0D /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC736A022B1ED7E0040FF0D /* WordTextView.swift in Sources */,
 				4DC7367422AE67FA0040FF0D /* ViewController.swift in Sources */,
 				4DC7367222AE67FA0040FF0D /* AppDelegate.swift in Sources */,
 			);
