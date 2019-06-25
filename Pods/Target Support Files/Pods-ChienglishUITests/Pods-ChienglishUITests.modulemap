@@ -1,0 +1,6 @@
+framework module Pods_ChienglishUITests {
+  umbrella header "Pods-ChienglishUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

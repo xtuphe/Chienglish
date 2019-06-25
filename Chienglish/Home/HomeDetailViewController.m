@@ -11,6 +11,8 @@
 #import "HomeCell.h"
 #import "HomeViewController.h"
 #import "Tabbar.h"
+#import "Chienglish-Swift.h"
+
 @interface HomeDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIViewControllerAnimatedTransitioning,UINavigationControllerDelegate,UIGestureRecognizerDelegate>
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIImageView *bgImageView;     // 上个页面截图
@@ -67,6 +69,9 @@
     
     [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = [self tableViewHeaderView];
+    [self.tableView registerNib:[UINib nibWithNibName:@"WordTextCell" bundle:nil] forCellReuseIdentifier:@"WordTextCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LabelCell" bundle:nil] forCellReuseIdentifier:@"LabelCell"];
+    
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
     [self.tableView addGestureRecognizer:pan];
     pan.delegate = self;
@@ -89,28 +94,18 @@
 
 #pragma mark - ==============================Delegate============================
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = [UILabel withString:self.contentLabel.text font:self.contentLabel.font ViewWidth:SCREEN_WIDTH-36];
-    return 62+size.height;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WBHOMECELLID"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"WBHOMECELLID"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = COLOR_WHITE;
-        cell.contentView.backgroundColor = COLOR_WHITE;
-    }
+    WordTextCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WordTextCell"];
     self.contentLabel.text = self.content;
-    CGSize size = [UILabel withString:self.contentLabel.text font:self.contentLabel.font ViewWidth:SCREEN_WIDTH-36];
-    self.contentLabel.frame = CGRectMake(18,42, SCREEN_WIDTH-36, size.height);
-    [cell.contentView addSubview:self.contentLabel];
+    cell.textView.text = self.content;
     return cell;
 }
 

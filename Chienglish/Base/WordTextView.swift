@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Popover
 
 class WordTextView: UITextView {
 
@@ -19,9 +20,18 @@ class WordTextView: UITextView {
         // 获取点击的字母的位置
         let characterIndex = self.layoutManager.characterIndex(for: touchPoint, in: self.textContainer
             , fractionOfDistanceBetweenInsertionPoints: nil)
+        // 过滤非英文
+        let string = self.attributedText.string
+        let char = string[string.index(string.startIndex, offsetBy: characterIndex)]
+        if !isLetter(char: char) {
+            super.touchesBegan(touches, with: event)
+            return
+        }
         // 获取单词的范围。range 由起始位置和长度构成。
         let range = getWordRange(characterIndex: characterIndex)
         highlightWord(range: range)
+        let word = stringFromNSRange(range: range, string: string)
+        showReferenceView(word: word, touch: touch)
         super.touchesBegan(touches, with: event)
     }
 
@@ -51,6 +61,9 @@ class WordTextView: UITextView {
     }
     
     func isLetter(char : Character) -> Bool {
+        if char.asciiValue == nil {
+            return false
+        }
         if (char.asciiValue! >= UInt8(65) && char.asciiValue! <= UInt8(90)) ||
             (char.asciiValue! >= UInt8(97) && char.asciiValue! <= UInt8(122)) {
             return true
@@ -58,11 +71,38 @@ class WordTextView: UITextView {
         return false
     }
     
-    func highlightWord(range : NSRange) {
+    func highlightWord(range : NSRange){
         let attrStr = NSMutableAttributedString.init(string: attributedText.string, attributes: [NSAttributedString.Key.font : font ?? UIFont.systemFont(ofSize: 17)])
-        attrStr .addAttributes([NSAttributedString.Key.foregroundColor : UIColor.black,
+        attrStr.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.black,
                                 NSAttributedString.Key.backgroundColor : UIColor.yellow], range: range)
         attributedText = attrStr
     }
     
+    func stringFromNSRange(range : NSRange, string : String) -> String{
+        let startIndex = string.index(string.startIndex, offsetBy: range.location)
+        let endIndex = string.index(string.startIndex, offsetBy: range.location + range.length)
+        return String(string[startIndex ..< endIndex])
+    }
+    
+    func showReferenceView(word : String, touch : UITouch) {
+//        let refVC = ReferenceVC.init(term: word)
+
+        let refVC = CenterViewController()
+//        refVC.size = CGSize.init(width: screenWidth() * 0.8, height: screenHeight() * 0.6)
+//        refVC.term = word
+        refVC.view.isUserInteractionEnabled = true
+//        let refVC = TestViewController.init()
+//        refVC.view.frame = CGRect.init(x: 0, y: 0, width: screenWidth(), height: screenHeight())
+        
+        let view = refVC.view
+        let touchPoint = touch.location(in: UIApplication.shared.delegate?.window!)
+        let options = [
+            .type(touchPoint.y > screenHeight() / 2.0 ? .up : .down),
+            .animationIn(0.3),
+            .arrowSize(CGSize.zero)
+            ] as [PopoverOption]
+        let popover = Popover.init(options: options)
+//        view?.frame = CGRect.init(x: 0, y: 0, width: refVC.size.width, height: refVC.size.height)
+        popover.show(view!, point: touchPoint)
+    }
 }

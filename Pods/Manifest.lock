@@ -1,0 +1,26 @@
+PODS:
+  - KUIPopOver (1.1.2)
+  - Popover (1.2.2)
+  - SwiftMessages (7.0.0):
+    - SwiftMessages/App (= 7.0.0)
+  - SwiftMessages/App (7.0.0)
+
+DEPENDENCIES:
+  - KUIPopOver
+  - Popover
+  - SwiftMessages
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KUIPopOver
+    - Popover
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  KUIPopOver: fc7ccb3c1c1ada51f5251477a7993ec452e3eefb
+  Popover: 21e357f86d45c8d9e29a41a4adbca3664d6e511f
+  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
+
+PODFILE CHECKSUM: 0fc697446c7a28f6dae9ba529b227eddafc74069
+
+COCOAPODS: 1.6.1
