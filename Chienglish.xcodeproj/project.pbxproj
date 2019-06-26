@@ -37,13 +37,19 @@
 		4D1C339622C0DF3E003F931C /* IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339522C0DF3E003F931C /* IBInspectable.swift */; };
 		4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339722C0DF75003F931C /* PMSuperButton.swift */; };
 		4D1C339A22C0E077003F931C /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339922C0E077003F931C /* NotiView.swift */; };
-		4D1C339E22C0EB72003F931C /* ReferenceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339D22C0EB72003F931C /* ReferenceVC.m */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
 		4D4AB8AC22BCBAB700162D73 /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */; };
 		4D87A1C222C3130F00873D55 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1C022C3130F00873D55 /* CommentCell.swift */; };
 		4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1C122C3130F00873D55 /* CommentCell.xib */; };
+		4D87A1C622C31D6600873D55 /* CommunityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1C522C31D6600873D55 /* CommunityListVC.swift */; };
+		4D87A1C922C31FA700873D55 /* CommunityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1C722C31FA700873D55 /* CommunityListCell.swift */; };
+		4D87A1CA22C31FA700873D55 /* CommunityListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1C822C31FA700873D55 /* CommunityListCell.xib */; };
+		4D87A1CC22C320AE00873D55 /* CommunityButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1CB22C320AE00873D55 /* CommunityButtonsView.swift */; };
+		4D87A1CE22C320BB00873D55 /* CommunityButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */; };
+		4D87A1D022C33F5D00873D55 /* ImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */; };
+		4D87A1D222C34A9400873D55 /* ImageDisplayView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */; };
 		4DC7367222AE67FA0040FF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7367122AE67FA0040FF0D /* AppDelegate.swift */; };
 		4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367822AE67FC0040FF0D /* Assets.xcassets */; };
 		4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367A22AE67FC0040FF0D /* LaunchScreen.storyboard */; };
@@ -118,14 +124,19 @@
 		4D1C339522C0DF3E003F931C /* IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectable.swift; sourceTree = "<group>"; };
 		4D1C339722C0DF75003F931C /* PMSuperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMSuperButton.swift; sourceTree = "<group>"; };
 		4D1C339922C0E077003F931C /* NotiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
-		4D1C339C22C0EB72003F931C /* ReferenceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferenceVC.h; sourceTree = "<group>"; };
-		4D1C339D22C0EB72003F931C /* ReferenceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferenceVC.m; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
 		4D87A1C022C3130F00873D55 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		4D87A1C122C3130F00873D55 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		4D87A1C522C31D6600873D55 /* CommunityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListVC.swift; sourceTree = "<group>"; };
+		4D87A1C722C31FA700873D55 /* CommunityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListCell.swift; sourceTree = "<group>"; };
+		4D87A1C822C31FA700873D55 /* CommunityListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityListCell.xib; sourceTree = "<group>"; };
+		4D87A1CB22C320AE00873D55 /* CommunityButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityButtonsView.swift; sourceTree = "<group>"; };
+		4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityButtonsView.xib; sourceTree = "<group>"; };
+		4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDisplayView.swift; sourceTree = "<group>"; };
+		4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDisplayView4.xib; sourceTree = "<group>"; };
 		4DC7366E22AE67FA0040FF0D /* Chienglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chienglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC7367122AE67FA0040FF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC7367822AE67FC0040FF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,10 +217,10 @@
 		4D106D0422BBA4FE000EF71D /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				4D106D0522BBA4FE000EF71D /* TabBarController.m */,
-				4D106D0622BBA4FE000EF71D /* Tabbar.m */,
 				4D106D0722BBA4FE000EF71D /* TabBarController.h */,
+				4D106D0522BBA4FE000EF71D /* TabBarController.m */,
 				4D106D0822BBA4FE000EF71D /* Tabbar.h */,
+				4D106D0622BBA4FE000EF71D /* Tabbar.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -243,8 +254,6 @@
 				4DC7369F22B1ED7E0040FF0D /* WordTextView.swift */,
 				4D1C339322C0B45F003F931C /* XReferenceVC.swift */,
 				4D1C339722C0DF75003F931C /* PMSuperButton.swift */,
-				4D1C339C22C0EB72003F931C /* ReferenceVC.h */,
-				4D1C339D22C0EB72003F931C /* ReferenceVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -295,6 +304,20 @@
 			name = Architecture;
 			sourceTree = "<group>";
 		};
+		4D87A1C422C31C2800873D55 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				4D87A1C522C31D6600873D55 /* CommunityListVC.swift */,
+				4D87A1C722C31FA700873D55 /* CommunityListCell.swift */,
+				4D87A1C822C31FA700873D55 /* CommunityListCell.xib */,
+				4D87A1CB22C320AE00873D55 /* CommunityButtonsView.swift */,
+				4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */,
+				4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */,
+				4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		4DC7366522AE67FA0040FF0D = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +346,7 @@
 				4DC7367822AE67FC0040FF0D /* Assets.xcassets */,
 				4D4AB8A422BBA87400162D73 /* Architecture */,
 				4D1C337722C0A904003F931C /* Base */,
+				4D87A1C422C31C2800873D55 /* Community */,
 				4D106D2922BBA731000EF71D /* Home */,
 				4D106CF522BBA4FE000EF71D /* Tools */,
 				4D1C339B22C0EA6E003F931C /* Others */,
@@ -471,7 +495,10 @@
 				4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */,
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
 				4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */,
+				4D87A1CA22C31FA700873D55 /* CommunityListCell.xib in Resources */,
 				4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */,
+				4D87A1CE22C320BB00873D55 /* CommunityButtonsView.xib in Resources */,
+				4D87A1D222C34A9400873D55 /* ImageDisplayView4.xib in Resources */,
 				4D4AB8AC22BCBAB700162D73 /* LabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,8 +574,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Chienglish/Pods-Chienglish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -556,8 +585,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KUIPopOver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +627,7 @@
 			files = (
 				4D1C338822C0ACEF003F931C /* CGVector+Extensions.swift in Sources */,
 				4D106D1C22BBA4FE000EF71D /* Tabbar.m in Sources */,
+				4D87A1C622C31D6600873D55 /* CommunityListVC.swift in Sources */,
 				4D1C338A22C0ACEF003F931C /* SKTTimingFunctions.swift in Sources */,
 				4D1C339622C0DF3E003F931C /* IBInspectable.swift in Sources */,
 				4DC736A022B1ED7E0040FF0D /* WordTextView.swift in Sources */,
@@ -605,6 +637,7 @@
 				4D106D1A22BBA4FE000EF71D /* MineViewController.m in Sources */,
 				4D106D1722BBA4FE000EF71D /* CommunityViewController.m in Sources */,
 				4D1C338D22C0ACEF003F931C /* SKNode+Extensions.swift in Sources */,
+				4D87A1CC22C320AE00873D55 /* CommunityButtonsView.swift in Sources */,
 				4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */,
 				4D1C338C22C0ACEF003F931C /* SKAction+SpecialEffects.swift in Sources */,
 				4D1C338B22C0ACEF003F931C /* SKAction+Extensions.swift in Sources */,
@@ -613,7 +646,8 @@
 				4D106D1822BBA4FE000EF71D /* UILabel+Size.m in Sources */,
 				4D106CF222BBA4DF000EF71D /* HomeCell.m in Sources */,
 				4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */,
-				4D1C339E22C0EB72003F931C /* ReferenceVC.m in Sources */,
+				4D87A1D022C33F5D00873D55 /* ImageDisplayView.swift in Sources */,
+				4D87A1C922C31FA700873D55 /* CommunityListCell.swift in Sources */,
 				4D1C339222C0ACEF003F931C /* CGFloat+Extensions.swift in Sources */,
 				4D106D1B22BBA4FE000EF71D /* TabBarController.m in Sources */,
 				4D1C338F22C0ACEF003F931C /* SKTEffects.swift in Sources */,

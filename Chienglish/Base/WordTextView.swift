@@ -11,6 +11,11 @@ import KUIPopOver
 
 class WordTextView: UITextView {
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentInset = UIEdgeInsets.init(top: 0, left: -5, bottom: 0, right: -5)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 获取当前触摸位置的字符所属的字母(提示：触摸位置需向下调整10个点，以便与文本元素对齐)
         let touch = touches.first!
@@ -72,9 +77,9 @@ class WordTextView: UITextView {
     }
     
     func highlightWord(range : NSRange){
-        let attrStr = NSMutableAttributedString.init(string: attributedText.string, attributes: [NSAttributedString.Key.font : font ?? UIFont.systemFont(ofSize: 17)])
+        let attrStr = resetAttr()
         attrStr.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.black,
-                                NSAttributedString.Key.backgroundColor : UIColor.yellow], range: range)
+                               NSAttributedString.Key.backgroundColor : UIColor.yellow], range: range)
         attributedText = attrStr
     }
     
@@ -82,6 +87,14 @@ class WordTextView: UITextView {
         let startIndex = string.index(string.startIndex, offsetBy: range.location)
         let endIndex = string.index(string.startIndex, offsetBy: range.location + range.length)
         return String(string[startIndex ..< endIndex])
+    }
+    
+    func resetAttr() -> NSMutableAttributedString {
+        let attrStr = NSMutableAttributedString.init(string: attributedText.string, attributes:
+            [NSAttributedString.Key.font : font ?? UIFont.systemFont(ofSize: 17),
+             NSAttributedString.Key.foregroundColor : textColor ?? UIColor.black])
+        attributedText = attrStr
+        return attrStr
     }
     
     func showReferenceView(word : String, touchPoint : CGPoint) {

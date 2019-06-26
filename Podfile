@@ -9,6 +9,8 @@ target 'Chienglish' do
   pod 'SwiftMessages'
   pod 'KUIPopOver'
   pod 'ReactiveCocoa'
+  pod 'SKPhotoBrowser'
+  pod 'Masonry'
   
   target 'ChienglishTests' do
     inherit! :search_paths

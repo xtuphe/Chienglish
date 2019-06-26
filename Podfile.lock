@@ -1,30 +1,38 @@
 PODS:
   - KUIPopOver (1.1.2)
+  - Masonry (1.1.0)
   - ReactiveCocoa (10.0.0):
     - ReactiveSwift (~> 6.0)
   - ReactiveSwift (6.0.0)
+  - SKPhotoBrowser (6.1.0)
   - SwiftMessages (7.0.0):
     - SwiftMessages/App (= 7.0.0)
   - SwiftMessages/App (7.0.0)
 
 DEPENDENCIES:
   - KUIPopOver
+  - Masonry
   - ReactiveCocoa
+  - SKPhotoBrowser
   - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KUIPopOver
+    - Masonry
     - ReactiveCocoa
     - ReactiveSwift
+    - SKPhotoBrowser
     - SwiftMessages
 
 SPEC CHECKSUMS:
   KUIPopOver: fc7ccb3c1c1ada51f5251477a7993ec452e3eefb
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
   ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
+  SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
 
-PODFILE CHECKSUM: a271dc9ef2312f6e0cea3f077e944ddc190aed5b
+PODFILE CHECKSUM: 2f4c16867864fa5b33d03209c7aa2efbaaf4a1b9
 
 COCOAPODS: 1.6.1

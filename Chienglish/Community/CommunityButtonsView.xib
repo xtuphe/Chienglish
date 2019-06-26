@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommunityButtonsView" customModule="Chienglish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-vn-IfJ" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="107"/>
+                    <state key="normal" title="Like">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-VO-XxA" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="107"/>
+                    <state key="normal" title="Dislike">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-V3-hnO" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="207" y="0.0" width="103.5" height="107"/>
+                    <state key="normal" title="Comment">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-W9-2If" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="107"/>
+                    <state key="normal" title="举报">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eO4-W9-2If" firstAttribute="leading" secondItem="ewH-V3-hnO" secondAttribute="trailing" id="1nt-23-E09"/>
+                <constraint firstAttribute="bottom" secondItem="ewH-V3-hnO" secondAttribute="bottom" id="2kR-6f-Tkr"/>
+                <constraint firstItem="eO4-W9-2If" firstAttribute="width" secondItem="UZC-vn-IfJ" secondAttribute="width" id="5cN-W8-HhK"/>
+                <constraint firstItem="5EN-VO-XxA" firstAttribute="width" secondItem="UZC-vn-IfJ" secondAttribute="width" id="7nM-pc-3p9"/>
+                <constraint firstItem="UZC-vn-IfJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.25" id="GRR-NO-4I3"/>
+                <constraint firstItem="5EN-VO-XxA" firstAttribute="leading" secondItem="UZC-vn-IfJ" secondAttribute="trailing" id="J6m-h2-P3J"/>
+                <constraint firstItem="ewH-V3-hnO" firstAttribute="leading" secondItem="5EN-VO-XxA" secondAttribute="trailing" id="YX8-PX-Eba"/>
+                <constraint firstItem="eO4-W9-2If" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a3K-Jo-9tb"/>
+                <constraint firstAttribute="trailing" secondItem="eO4-W9-2If" secondAttribute="trailing" id="bS4-gc-Fj7"/>
+                <constraint firstItem="5EN-VO-XxA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bY0-Cf-Ly5"/>
+                <constraint firstAttribute="bottom" secondItem="UZC-vn-IfJ" secondAttribute="bottom" id="bfU-YA-VA7"/>
+                <constraint firstItem="ewH-V3-hnO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dli-V6-r4t"/>
+                <constraint firstItem="UZC-vn-IfJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l7Y-Yj-82d"/>
+                <constraint firstAttribute="bottom" secondItem="eO4-W9-2If" secondAttribute="bottom" id="njC-Q8-pt9"/>
+                <constraint firstItem="UZC-vn-IfJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p5T-Fx-Zlc"/>
+                <constraint firstAttribute="bottom" secondItem="5EN-VO-XxA" secondAttribute="bottom" id="qaL-YN-3Ys"/>
+                <constraint firstItem="ewH-V3-hnO" firstAttribute="width" secondItem="UZC-vn-IfJ" secondAttribute="width" id="xgw-gR-vkE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-25.111607142857142"/>
+        </view>
+    </objects>
+</document>
