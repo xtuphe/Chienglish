@@ -42,6 +42,8 @@
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
 		4D4AB8AC22BCBAB700162D73 /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */; };
+		4D87A1C222C3130F00873D55 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1C022C3130F00873D55 /* CommentCell.swift */; };
+		4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1C122C3130F00873D55 /* CommentCell.xib */; };
 		4DC7367222AE67FA0040FF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7367122AE67FA0040FF0D /* AppDelegate.swift */; };
 		4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367822AE67FC0040FF0D /* Assets.xcassets */; };
 		4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367A22AE67FC0040FF0D /* LaunchScreen.storyboard */; };
@@ -122,6 +124,8 @@
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
+		4D87A1C022C3130F00873D55 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		4D87A1C122C3130F00873D55 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		4DC7366E22AE67FA0040FF0D /* Chienglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chienglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC7367122AE67FA0040FF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC7367822AE67FC0040FF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */,
 				4D4AB8A922BCBAB700162D73 /* LabelCell.swift */,
 				4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */,
+				4D87A1C022C3130F00873D55 /* CommentCell.swift */,
+				4D87A1C122C3130F00873D55 /* CommentCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */,
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
 				4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */,
 				4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */,
@@ -610,6 +617,7 @@
 				4D1C339222C0ACEF003F931C /* CGFloat+Extensions.swift in Sources */,
 				4D106D1B22BBA4FE000EF71D /* TabBarController.m in Sources */,
 				4D1C338F22C0ACEF003F931C /* SKTEffects.swift in Sources */,
+				4D87A1C222C3130F00873D55 /* CommentCell.swift in Sources */,
 				4D1C339A22C0E077003F931C /* NotiView.swift in Sources */,
 				4D106CF322BBA4DF000EF71D /* HomeDetailViewController.m in Sources */,
 				4D1C337922C0ACAE003F931C /* Convenient.swift in Sources */,

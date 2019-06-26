@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="247" id="KGk-i7-Jjw" customClass="CommentCell" customModule="Chienglish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="246.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_photo_define" translatesAutoresizingMaskIntoConstraints="NO" id="Gn2-7g-gZl">
+                        <rect key="frame" x="20" y="55" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="KTF-Pw-Rql"/>
+                            <constraint firstAttribute="height" constant="40" id="lbi-Lt-ckD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Po6-72-ID5">
+                        <rect key="frame" x="75" y="55" width="229" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="M1F-N3-mud"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2OH-X7-Gtz" customClass="WordTextView" customModule="Chienglish" customModuleProvider="target">
+                        <rect key="frame" x="75" y="80" width="229" height="122"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="2OH-X7-Gtz" secondAttribute="bottom" id="7Uv-Fq-809"/>
+                    <constraint firstItem="2OH-X7-Gtz" firstAttribute="top" secondItem="Po6-72-ID5" secondAttribute="bottom" id="8la-Qj-hyW"/>
+                    <constraint firstItem="Gn2-7g-gZl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="BG0-IW-CNo"/>
+                    <constraint firstItem="Po6-72-ID5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="NJV-kw-yRb"/>
+                    <constraint firstItem="Po6-72-ID5" firstAttribute="leading" secondItem="Gn2-7g-gZl" secondAttribute="trailing" constant="15" id="PMT-du-Ttn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2OH-X7-Gtz" secondAttribute="trailing" id="X6W-Ox-RV6"/>
+                    <constraint firstItem="Gn2-7g-gZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Yl9-dP-D5W"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Po6-72-ID5" secondAttribute="trailing" id="i7C-yR-tjN"/>
+                    <constraint firstItem="2OH-X7-Gtz" firstAttribute="leading" secondItem="Gn2-7g-gZl" secondAttribute="trailing" constant="15" id="ntf-z9-Arm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImage" destination="Gn2-7g-gZl" id="fnA-d9-ew9"/>
+                <outlet property="textView" destination="2OH-X7-Gtz" id="zdJ-rh-XPn"/>
+                <outlet property="titleButton" destination="Po6-72-ID5" id="xmb-de-haq"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="190.51339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Mine_photo_define" width="84" height="84.5"/>
+    </resources>
+</document>

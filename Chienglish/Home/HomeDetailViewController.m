@@ -71,7 +71,8 @@
     self.tableView.tableHeaderView = [self tableViewHeaderView];
     [self.tableView registerNib:[UINib nibWithNibName:@"WordTextCell" bundle:nil] forCellReuseIdentifier:@"WordTextCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"LabelCell" bundle:nil] forCellReuseIdentifier:@"LabelCell"];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"CommentCell" bundle:nil] forCellReuseIdentifier:@"CommentCell"];
+
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
     [self.tableView addGestureRecognizer:pan];
     pan.delegate = self;
@@ -95,7 +96,7 @@
 #pragma mark - ==============================Delegate============================
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -103,12 +104,37 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WordTextCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WordTextCell"];
+    switch (indexPath.section) {
+        case 0:
+            return [self setupWordTextCell];
+        case 1:
+            return [self setupInteretationCell];
+        default:
+            return [self setupCommentCell:indexPath];
+    }
+    return nil;
+}
+
+- (WordTextCell *)setupWordTextCell {
+    WordTextCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"WordTextCell"];
     self.contentLabel.text = self.content;
     cell.textView.text = self.content;
     return cell;
 }
 
+- (WordTextCell *)setupInteretationCell {
+    WordTextCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"WordTextCell"];
+    cell.textView.text = @"Words You Might Want To Know:\ntest \nTest test \nTest test \nTest test Test test \nTest test Test test Test test Test test ";
+    return cell;
+}
+
+- (CommentCell *)setupCommentCell:(NSIndexPath *)indexPath {
+    CommentCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CommentCell"];
+    [cell.titleButton setTitle:@"路人" forState:UIControlStateNormal];
+    cell.textView.text = @"评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试，评论测试";
+    cell.avatarImage.image = [UIImage imageNamed:@"Mine_photo_define"];
+    return cell;
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y <= 0) {
