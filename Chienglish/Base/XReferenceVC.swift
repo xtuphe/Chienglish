@@ -7,37 +7,44 @@
 //
 
 import UIKit
+import KUIPopOver
 
-class XReferenceVC: UIReferenceLibraryViewController {
-
+class XReferenceVC: UIReferenceLibraryViewController, KUIPopOverUsable {
+    var contentSize = CGSize.init(width: 0.8 * screenWidth(), height: 0.6 * screenHeight())
     var term = ""
-    let size = CGSize.init(width: 0.8 * screenWidth(), height: 0.6 * screenHeight())
+
+    // MARK: - UIPopoverPresentationControllerDelegate
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBar = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: size.width, height: 44))
-        navBar.text = term
-        navBar.textColor = .white
-        navBar.font = .boldSystemFont(ofSize: 20)
-        navBar.textAlignment = .center
-        navBar.backgroundColor = UIColor.init(white: 0, alpha: 1)
-        view.addSubview(navBar)
-        
-        let toolBar = UIToolbar.init(frame: CGRect.init(x: 0, y: size.height - 144, width: size.width, height: 144))
-        view.addSubview(toolBar)
-        toolBar.backgroundColor = .white
+        //去掉右上角Done按钮
+        navigationItem.rightBarButtonItem = nil
 
-        let leftButton = UIBarButtonItem.init(title: "词典设置", style: .plain, target: self, action: #selector(XReferenceVC.leftButtonPressed))
-        let rightButton = UIBarButtonItem.init(title: "添加到单词本", style: .plain, target: self, action: #selector(XReferenceVC.rightButtonPressed))
-        toolBar.setItems([leftButton, rightButton], animated: false)
+        let left = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: contentSize.width / 2.0, height: 44))
+        left.backgroundColor = .black
+        left.setTitleColor(.white, for: .normal)
+        left.setTitle("词典设置", for: .normal)
+        left.isUserInteractionEnabled = false
+        
+        let right = UIButton.init(frame: CGRect.init(x: contentSize.width / 2.0, y: 0, width: contentSize.width / 2.0, height: 44))
+        right.backgroundColor = .black
+        right.setTitle("添加到单词本", for: .normal)
+        right.addTarget(self, action: #selector(XReferenceVC.rightButtonPressed(button:)), for: .touchUpInside)
+
+        let containerView = view.subviews.first!
+        for sView in containerView.subviews {
+            if sView .isKind(of: UIToolbar.self) {
+                sView.addSubview(left)
+                sView.addSubview(right)
+            }
+        }
     }
     
-    @objc func leftButtonPressed() {
-        print("11111111111111111111111111111111111111111")
-    }
-    
-    @objc func rightButtonPressed() {
-        print("11111111111111111111111111111111111111111")
+    @objc func rightButtonPressed(button : UIButton) {
+        button.setTitle("已添加", for: .normal)
     }
     
 }
