@@ -1,5 +1,4 @@
 PODS:
-  - FLEX (3.0.0)
   - KUIPopOver (1.1.2)
   - ReactiveCocoa (10.0.0):
     - ReactiveSwift (~> 6.0)
@@ -9,26 +8,23 @@ PODS:
   - SwiftMessages/App (7.0.0)
 
 DEPENDENCIES:
-  - FLEX
   - KUIPopOver
   - ReactiveCocoa
   - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FLEX
     - KUIPopOver
     - ReactiveCocoa
     - ReactiveSwift
     - SwiftMessages
 
 SPEC CHECKSUMS:
-  FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
   KUIPopOver: fc7ccb3c1c1ada51f5251477a7993ec452e3eefb
   ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
   ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
   SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
 
-PODFILE CHECKSUM: 2b1b3ba3bf69cd41221a56663446c690a0af45e1
+PODFILE CHECKSUM: a271dc9ef2312f6e0cea3f077e944ddc190aed5b
 
 COCOAPODS: 1.6.1

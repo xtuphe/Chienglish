@@ -38,8 +38,6 @@
 		4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339722C0DF75003F931C /* PMSuperButton.swift */; };
 		4D1C339A22C0E077003F931C /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339922C0E077003F931C /* NotiView.swift */; };
 		4D1C339E22C0EB72003F931C /* ReferenceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339D22C0EB72003F931C /* ReferenceVC.m */; };
-		4D1C33A122C0F3E5003F931C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339F22C0F3E5003F931C /* TestViewController.swift */; };
-		4D1C33A222C0F3E5003F931C /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C33A022C0F3E5003F931C /* TestViewController.xib */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
@@ -120,8 +118,6 @@
 		4D1C339922C0E077003F931C /* NotiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
 		4D1C339C22C0EB72003F931C /* ReferenceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferenceVC.h; sourceTree = "<group>"; };
 		4D1C339D22C0EB72003F931C /* ReferenceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferenceVC.m; sourceTree = "<group>"; };
-		4D1C339F22C0F3E5003F931C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		4D1C33A022C0F3E5003F931C /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -243,8 +239,6 @@
 				4D1C339722C0DF75003F931C /* PMSuperButton.swift */,
 				4D1C339C22C0EB72003F931C /* ReferenceVC.h */,
 				4D1C339D22C0EB72003F931C /* ReferenceVC.m */,
-				4D1C339F22C0F3E5003F931C /* TestViewController.swift */,
-				4D1C33A022C0F3E5003F931C /* TestViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -320,12 +314,12 @@
 		4DC7367022AE67FA0040FF0D /* Chienglish */ = {
 			isa = PBXGroup;
 			children = (
-				4D1C339B22C0EA6E003F931C /* Others */,
-				4D1C337722C0A904003F931C /* Base */,
 				4DC7367822AE67FC0040FF0D /* Assets.xcassets */,
 				4D4AB8A422BBA87400162D73 /* Architecture */,
+				4D1C337722C0A904003F931C /* Base */,
 				4D106D2922BBA731000EF71D /* Home */,
 				4D106CF522BBA4FE000EF71D /* Tools */,
+				4D1C339B22C0EA6E003F931C /* Others */,
 				4D106D0422BBA4FE000EF71D /* Tabbar */,
 			);
 			path = Chienglish;
@@ -469,7 +463,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
-				4D1C33A222C0F3E5003F931C /* TestViewController.xib in Resources */,
 				4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */,
 				4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */,
 				4D4AB8AC22BCBAB700162D73 /* LabelCell.xib in Resources */,
@@ -546,7 +539,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Chienglish/Pods-Chienglish-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
@@ -556,7 +548,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KUIPopOver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
@@ -630,7 +621,6 @@
 				4D1C338922C0ACEF003F931C /* Int+Extensions.swift in Sources */,
 				4D1C339022C0ACEF003F931C /* SKTAudio.swift in Sources */,
 				4D106D1422BBA4FE000EF71D /* FunctionViewController.m in Sources */,
-				4D1C33A122C0F3E5003F931C /* TestViewController.swift in Sources */,
 				4D106D1622BBA4FE000EF71D /* WBTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
