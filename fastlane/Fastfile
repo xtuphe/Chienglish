@@ -1,0 +1,60 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+desc "beta lane desc"
+lane :beta do
+build_app(export_method:"enterprise", export_xcargs:"-allowProvisioningUpdates", configuration:"Debug", output_directory:"./ipas", output_name:"Chinglish_Test.ipa")
+fir_beta
+# upload_dsym_beta
+end
+
+lane :fir_beta do
+sh "fir publish ../ipas/Chinglish_Test.ipa -T d38977856aa4cd80ab1e59ab1c6a091e"
+end
+
+lane :release do
+clear_derived_data
+build_app(export_method:"enterprise", export_xcargs:"-allowProvisioningUpdates", configuration:"Release", output_directory:"./ipas", output_name:"Chinglish_Release.ipa")
+fir_release
+# upload_dsym
+end
+
+lane :fir_release do
+sh "fir publish ../ipas/Chinglish_Release.ipa -T d38977856aa4cd80ab1e59ab1c6a091e"
+end
+
+lane :upload_dsym_beta do
+Dir.chdir("..") do
+sh "unzip ipas/Chinglish_Test.app.dSYM.zip"
+sh "curl -k -F upload=@/Users/xiejiakang/Documents/wei_long_sfa/weilong.app.dSYM/Contents/Resources/DWARF/weilong https://mobile-symbol-upload.tingyun.com/symbol/authkey/agabd376/appkey/f7ebea3587b64f64b4ce3ad4e7d98925"
+sh "rm -r weilong.app.dSYM"
+end
+end
+
+lane :upload_dsym do
+Dir.chdir("..") do
+# 先解压zip
+sh "unzip ipas/Chinglish_Release.app.dSYM.zip"
+# 上传需要的文件到听云
+sh "curl -k -F upload=@/Users/xiejiakang/Documents/wei_long_sfa/weilong.app.dSYM/Contents/Resources/DWARF/weilong https://mobile-symbol-upload.tingyun.com/symbol/authkey/agabd376/appkey/f7ebea3587b64f64b4ce3ad4e7d98925"
+# 删除解压的dSYM，因为是文件夹，所以要-r
+sh "rm -r weilong.app.dSYM"
+end
+end
+
+end

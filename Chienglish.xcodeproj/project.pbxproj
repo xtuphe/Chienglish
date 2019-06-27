@@ -50,6 +50,8 @@
 		4D87A1CE22C320BB00873D55 /* CommunityButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */; };
 		4D87A1D022C33F5D00873D55 /* ImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */; };
 		4D87A1D222C34A9400873D55 /* ImageDisplayView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */; };
+		4D87A1D522C3675F00873D55 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1D322C3675F00873D55 /* Appfile */; };
+		4D87A1D622C3675F00873D55 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 4D87A1D422C3675F00873D55 /* Fastfile */; };
 		4DC7367222AE67FA0040FF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7367122AE67FA0040FF0D /* AppDelegate.swift */; };
 		4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367822AE67FC0040FF0D /* Assets.xcassets */; };
 		4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7367A22AE67FC0040FF0D /* LaunchScreen.storyboard */; };
@@ -123,7 +125,7 @@
 		4D1C339322C0B45F003F931C /* XReferenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XReferenceVC.swift; sourceTree = "<group>"; };
 		4D1C339522C0DF3E003F931C /* IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectable.swift; sourceTree = "<group>"; };
 		4D1C339722C0DF75003F931C /* PMSuperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMSuperButton.swift; sourceTree = "<group>"; };
-		4D1C339922C0E077003F931C /* NotiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
+		4D1C339922C0E077003F931C /* NotiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 		4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityButtonsView.xib; sourceTree = "<group>"; };
 		4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDisplayView.swift; sourceTree = "<group>"; };
 		4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDisplayView4.xib; sourceTree = "<group>"; };
+		4D87A1D322C3675F00873D55 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Appfile; path = fastlane/Appfile; sourceTree = SOURCE_ROOT; };
+		4D87A1D422C3675F00873D55 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = SOURCE_ROOT; };
 		4DC7366E22AE67FA0040FF0D /* Chienglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chienglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC7367122AE67FA0040FF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC7367822AE67FC0040FF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 		4D4AB8A422BBA87400162D73 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				4D87A1D322C3675F00873D55 /* Appfile */,
+				4D87A1D422C3675F00873D55 /* Fastfile */,
 				4DC7367122AE67FA0040FF0D /* AppDelegate.swift */,
 				4D106CEB22BBA4DE000EF71D /* Chienglish-Bridging-Header.h */,
 				4D106D2722BBA515000EF71D /* Define.h */,
@@ -492,9 +498,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D87A1D622C3675F00873D55 /* Fastfile in Resources */,
 				4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */,
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
 				4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */,
+				4D87A1D522C3675F00873D55 /* Appfile in Resources */,
 				4D87A1CA22C31FA700873D55 /* CommunityListCell.xib in Resources */,
 				4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */,
 				4D87A1CE22C320BB00873D55 /* CommunityButtonsView.xib in Resources */,
@@ -833,7 +841,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LMN4QCWJBN;
+				DEVELOPMENT_TEAM = 7WYJD84DF5;
 				INFOPLIST_FILE = Chienglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -856,7 +864,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LMN4QCWJBN;
+				DEVELOPMENT_TEAM = 7WYJD84DF5;
 				INFOPLIST_FILE = Chienglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
