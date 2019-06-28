@@ -8,7 +8,7 @@ target 'Chienglish' do
   #  pod 'FLEX'
   pod 'SwiftMessages'
   pod 'KUIPopOver'
-  pod 'ReactiveCocoa'
+  #  pod 'ReactiveCocoa'
   pod 'SKPhotoBrowser'
   pod 'Masonry'
   

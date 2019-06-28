@@ -37,6 +37,12 @@
 		4D1C339622C0DF3E003F931C /* IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339522C0DF3E003F931C /* IBInspectable.swift */; };
 		4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339722C0DF75003F931C /* PMSuperButton.swift */; };
 		4D1C339A22C0E077003F931C /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C339922C0E077003F931C /* NotiView.swift */; };
+		4D2BAE6422C46DFC00CEDC7F /* MeAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE5F22C46DFC00CEDC7F /* MeAvatarCell.swift */; };
+		4D2BAE6522C46DFC00CEDC7F /* MeAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6022C46DFC00CEDC7F /* MeAvatarCell.xib */; };
+		4D2BAE6622C46DFC00CEDC7F /* MeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6122C46DFC00CEDC7F /* MeItemCell.xib */; };
+		4D2BAE6722C46DFC00CEDC7F /* MeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6222C46DFC00CEDC7F /* MeItemCell.swift */; };
+		4D2BAE6822C46DFC00CEDC7F /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6322C46DFC00CEDC7F /* MeVC.swift */; };
+		4D2BAE6C22C5EC9D00CEDC7F /* XSpeechControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
@@ -126,6 +132,12 @@
 		4D1C339522C0DF3E003F931C /* IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectable.swift; sourceTree = "<group>"; };
 		4D1C339722C0DF75003F931C /* PMSuperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMSuperButton.swift; sourceTree = "<group>"; };
 		4D1C339922C0E077003F931C /* NotiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		4D2BAE5F22C46DFC00CEDC7F /* MeAvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAvatarCell.swift; sourceTree = "<group>"; };
+		4D2BAE6022C46DFC00CEDC7F /* MeAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeAvatarCell.xib; sourceTree = "<group>"; };
+		4D2BAE6122C46DFC00CEDC7F /* MeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeItemCell.xib; sourceTree = "<group>"; };
+		4D2BAE6222C46DFC00CEDC7F /* MeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeItemCell.swift; sourceTree = "<group>"; };
+		4D2BAE6322C46DFC00CEDC7F /* MeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSpeechControl.swift; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -258,6 +270,7 @@
 				4DC7369F22B1ED7E0040FF0D /* WordTextView.swift */,
 				4D1C339322C0B45F003F931C /* XReferenceVC.swift */,
 				4D1C339722C0DF75003F931C /* PMSuperButton.swift */,
+				4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -294,6 +307,18 @@
 				4D106CF722BBA4FE000EF71D /* CenterViewController.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		4D2BAE5E22C46DE000CEDC7F /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				4D2BAE5F22C46DFC00CEDC7F /* MeAvatarCell.swift */,
+				4D2BAE6022C46DFC00CEDC7F /* MeAvatarCell.xib */,
+				4D2BAE6222C46DFC00CEDC7F /* MeItemCell.swift */,
+				4D2BAE6122C46DFC00CEDC7F /* MeItemCell.xib */,
+				4D2BAE6322C46DFC00CEDC7F /* MeVC.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		4D4AB8A422BBA87400162D73 /* Architecture */ = {
@@ -350,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC7367822AE67FC0040FF0D /* Assets.xcassets */,
+				4D2BAE5E22C46DE000CEDC7F /* Me */,
 				4D4AB8A422BBA87400162D73 /* Architecture */,
 				4D1C337722C0A904003F931C /* Base */,
 				4D87A1C422C31C2800873D55 /* Community */,
@@ -498,8 +524,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2BAE6622C46DFC00CEDC7F /* MeItemCell.xib in Resources */,
 				4D87A1D622C3675F00873D55 /* Fastfile in Resources */,
 				4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */,
+				4D2BAE6522C46DFC00CEDC7F /* MeAvatarCell.xib in Resources */,
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
 				4DC7367922AE67FC0040FF0D /* Assets.xcassets in Resources */,
 				4D87A1D522C3675F00873D55 /* Appfile in Resources */,
@@ -583,8 +611,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Chienglish/Pods-Chienglish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
@@ -594,8 +620,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KUIPopOver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
@@ -639,9 +663,11 @@
 				4D1C338A22C0ACEF003F931C /* SKTTimingFunctions.swift in Sources */,
 				4D1C339622C0DF3E003F931C /* IBInspectable.swift in Sources */,
 				4DC736A022B1ED7E0040FF0D /* WordTextView.swift in Sources */,
+				4D2BAE6422C46DFC00CEDC7F /* MeAvatarCell.swift in Sources */,
 				4D1C339122C0ACEF003F931C /* Vector3.swift in Sources */,
 				4D1C338E22C0ACEF003F931C /* CGPoint+Extensions.swift in Sources */,
 				4D106D1522BBA4FE000EF71D /* CenterViewController.m in Sources */,
+				4D2BAE6822C46DFC00CEDC7F /* MeVC.swift in Sources */,
 				4D106D1A22BBA4FE000EF71D /* MineViewController.m in Sources */,
 				4D106D1722BBA4FE000EF71D /* CommunityViewController.m in Sources */,
 				4D1C338D22C0ACEF003F931C /* SKNode+Extensions.swift in Sources */,
@@ -651,6 +677,7 @@
 				4D1C338B22C0ACEF003F931C /* SKAction+Extensions.swift in Sources */,
 				4D1C338722C0ACEF003F931C /* SKColor+Extensions.swift in Sources */,
 				4D1C339422C0B45F003F931C /* XReferenceVC.swift in Sources */,
+				4D2BAE6C22C5EC9D00CEDC7F /* XSpeechControl.swift in Sources */,
 				4D106D1822BBA4FE000EF71D /* UILabel+Size.m in Sources */,
 				4D106CF222BBA4DF000EF71D /* HomeCell.m in Sources */,
 				4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */,
@@ -660,6 +687,7 @@
 				4D106D1B22BBA4FE000EF71D /* TabBarController.m in Sources */,
 				4D1C338F22C0ACEF003F931C /* SKTEffects.swift in Sources */,
 				4D87A1C222C3130F00873D55 /* CommentCell.swift in Sources */,
+				4D2BAE6722C46DFC00CEDC7F /* MeItemCell.swift in Sources */,
 				4D1C339A22C0E077003F931C /* NotiView.swift in Sources */,
 				4D106CF322BBA4DF000EF71D /* HomeDetailViewController.m in Sources */,
 				4D1C337922C0ACAE003F931C /* Convenient.swift in Sources */,

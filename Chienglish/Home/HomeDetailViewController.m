@@ -45,6 +45,15 @@
     [self buildSubviews];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [XSpeechControl.share readWithText:self.content];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+}
 
 #pragma mark - ==============================data============================
 

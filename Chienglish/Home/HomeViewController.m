@@ -121,7 +121,7 @@
 
 
 - (void)initData {
-    [self.dataSource addObjectsFromArray:@[@"Home_demo_01",@"Home_demo_02",@"Home_demo_03"]];
+    [self.dataSource addObjectsFromArray:@[@"test1",@"test2",@"test3"]];
     
     [self.titles addObject:@"哈弗H6Coupe震撼上市"];
     [self.titles addObject:@"黑天鹅蛋糕 "];

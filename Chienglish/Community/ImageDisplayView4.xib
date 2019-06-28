@@ -15,28 +15,28 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="411"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_demo_01" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-5Z-ShJ">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-5Z-ShJ">
                     <rect key="frame" x="0.0" y="0.0" width="207" height="205.5"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="gHX-w3-u4z" appends="YES" id="zTj-P6-cdO"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_demo_01" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-R5-Nf0">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-R5-Nf0">
                     <rect key="frame" x="207" y="0.0" width="207" height="205.5"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="tmW-2s-4Sr" appends="YES" id="d67-pp-Tz8"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_demo_01" translatesAutoresizingMaskIntoConstraints="NO" id="sfe-hk-JHy">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test3" translatesAutoresizingMaskIntoConstraints="NO" id="sfe-hk-JHy">
                     <rect key="frame" x="0.0" y="205.5" width="207" height="205.5"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="TP0-ge-Wpl" appends="YES" id="Rfp-Qe-tXp"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_demo_01" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-KP-NLK">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test3" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-KP-NLK">
                     <rect key="frame" x="207" y="205.5" width="207" height="205.5"/>
                     <gestureRecognizers/>
                     <connections>
@@ -108,6 +108,8 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="Home_demo_01" width="1125" height="1476"/>
+        <image name="test1" width="1000" height="1381"/>
+        <image name="test2" width="1200" height="2130"/>
+        <image name="test3" width="468" height="736"/>
     </resources>
 </document>

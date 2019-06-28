@@ -18,4 +18,5 @@ func showMessage(name: String, content: String) {
     view.button?.isHidden = true
     view.iconImageView?.isHidden = true
     SwiftMessages.show(view: view)
+    XSpeechControl.shared.synthesizer.pauseSpeaking(at: .word)
 }

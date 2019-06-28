@@ -35,8 +35,8 @@
     CommunityViewController *commVC = [[CommunityViewController alloc]init];
     [self setViewController:commVC title:@"单词" image:@"TB_community_normal" selectImage:@"TB_community_press"];
     // 我的
-    MineViewController *mineVC = [[MineViewController alloc]init];
-    [self setViewController:mineVC title:@"我的" image:@"TB_mine_normal" selectImage:@"TB_mine_press"];
+    MeVC *meVC = [[MeVC alloc]init];
+    [self setViewController:meVC title:@"我的" image:@"TB_mine_normal" selectImage:@"TB_mine_press"];
 
     self.customTabbar = [[Tabbar alloc]initWithCenterImage:@"homePage_saoyisao" selectImage:@"homePage_saoyisao" target:self action:@selector(CenterButtonClick)];
     [self setValue:self.customTabbar forKey:@"tabBar"];

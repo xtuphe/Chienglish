@@ -17,7 +17,7 @@ class ImageDisplayView: UIView {
     
     override func awakeFromNib() {
         print("image display awake")
-        loadWithImageUrls(url: ["Home_demo_01", "Home_demo_01", "Home_demo_01", "Home_demo_01"])
+        loadWithImageUrls(url: ["test1", "test2", "test3", "test1"])
     }
     
     func loadWithImageUrls(url : Array<String>) {
@@ -47,7 +47,7 @@ class ImageDisplayView4: UIView {
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view! as! UIImageView
         var images = [SKPhoto]()
-        let photo = SKPhoto.photoWithImage(UIImage.init(named: "Home_demo_01")!)
+        let photo = SKPhoto.photoWithImage(UIImage.init(named: "test1")!)
         images.append(photo)
         let browser = SKPhotoBrowser(originImage: imageView.image ?? UIImage(), photos: images, animatedFromView: imageView)
         browser.initializePageIndex(0)
