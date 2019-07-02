@@ -30,4 +30,8 @@ open class XSpeechControl: NSObject, AVSpeechSynthesizerDelegate {
         let utterance = AVSpeechUtterance.init(string: text)
         synthesizer.speak(utterance)
     }
+    
+    @objc open func stop() {
+        synthesizer.stopSpeaking(at: .word)
+    }
 }

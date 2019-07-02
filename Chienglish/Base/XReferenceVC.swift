@@ -22,7 +22,7 @@ class XReferenceVC: UIReferenceLibraryViewController, KUIPopOverUsable {
         super.viewDidLoad()
         //去掉右上角Done按钮
         navigationItem.rightBarButtonItem = nil
-
+        
         let left = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: contentSize.width / 2.0, height: 44))
         left.backgroundColor = .black
         left.setTitleColor(.white, for: .normal)

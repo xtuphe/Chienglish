@@ -5,3 +5,4 @@
 #import "TabBarController.h"
 #import "MineViewController.h"
 #import "CenterViewController.h"
+#import "KYWaterWaveView.h"

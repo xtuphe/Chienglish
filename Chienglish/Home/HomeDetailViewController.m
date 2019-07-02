@@ -52,7 +52,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
+    [XSpeechControl.share stop];
 }
 
 #pragma mark - ==============================data============================

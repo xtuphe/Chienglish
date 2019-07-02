@@ -32,7 +32,7 @@
     CommunityListVC *funcVC = [[CommunityListVC alloc]init];
     [self setViewController:funcVC title:@"社区" image:@"TB_function_normal" selectImage:@"TB_function_press"];
     // 社区
-    CommunityViewController *commVC = [[CommunityViewController alloc]init];
+    SpeechRecognizerVC *commVC = [[SpeechRecognizerVC alloc]init];
     [self setViewController:commVC title:@"单词" image:@"TB_community_normal" selectImage:@"TB_community_press"];
     // 我的
     MeVC *meVC = [[MeVC alloc]init];

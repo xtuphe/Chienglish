@@ -43,6 +43,9 @@
 		4D2BAE6722C46DFC00CEDC7F /* MeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6222C46DFC00CEDC7F /* MeItemCell.swift */; };
 		4D2BAE6822C46DFC00CEDC7F /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6322C46DFC00CEDC7F /* MeVC.swift */; };
 		4D2BAE6C22C5EC9D00CEDC7F /* XSpeechControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */; };
+		4D43FCBA22C9EDC400874B61 /* SpeechRecognizerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCB822C9EDC400874B61 /* SpeechRecognizerVC.swift */; };
+		4D43FCBB22C9EDC400874B61 /* SpeechRecognizerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */; };
+		4D43FCBE22C9FBBA00874B61 /* KYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCBC22C9FBBA00874B61 /* KYWaterWaveView.m */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
@@ -138,6 +141,10 @@
 		4D2BAE6222C46DFC00CEDC7F /* MeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeItemCell.swift; sourceTree = "<group>"; };
 		4D2BAE6322C46DFC00CEDC7F /* MeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSpeechControl.swift; sourceTree = "<group>"; };
+		4D43FCB822C9EDC400874B61 /* SpeechRecognizerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerVC.swift; sourceTree = "<group>"; };
+		4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechRecognizerVC.xib; sourceTree = "<group>"; };
+		4D43FCBC22C9FBBA00874B61 /* KYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYWaterWaveView.m; sourceTree = "<group>"; };
+		4D43FCBD22C9FBBA00874B61 /* KYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYWaterWaveView.h; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -271,6 +278,8 @@
 				4D1C339322C0B45F003F931C /* XReferenceVC.swift */,
 				4D1C339722C0DF75003F931C /* PMSuperButton.swift */,
 				4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */,
+				4D43FCB822C9EDC400874B61 /* SpeechRecognizerVC.swift */,
+				4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -297,6 +306,8 @@
 		4D1C339B22C0EA6E003F931C /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				4D43FCBD22C9FBBA00874B61 /* KYWaterWaveView.h */,
+				4D43FCBC22C9FBBA00874B61 /* KYWaterWaveView.m */,
 				4D106CFC22BBA4FE000EF71D /* MineViewController.h */,
 				4D106D0322BBA4FE000EF71D /* MineViewController.m */,
 				4D106CFE22BBA4FE000EF71D /* FunctionViewController.h */,
@@ -526,6 +537,7 @@
 			files = (
 				4D2BAE6622C46DFC00CEDC7F /* MeItemCell.xib in Resources */,
 				4D87A1D622C3675F00873D55 /* Fastfile in Resources */,
+				4D43FCBB22C9EDC400874B61 /* SpeechRecognizerVC.xib in Resources */,
 				4D87A1C322C3130F00873D55 /* CommentCell.xib in Resources */,
 				4D2BAE6522C46DFC00CEDC7F /* MeAvatarCell.xib in Resources */,
 				4DC7367C22AE67FC0040FF0D /* LaunchScreen.storyboard in Resources */,
@@ -682,6 +694,7 @@
 				4D106CF222BBA4DF000EF71D /* HomeCell.m in Sources */,
 				4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */,
 				4D87A1D022C33F5D00873D55 /* ImageDisplayView.swift in Sources */,
+				4D43FCBE22C9FBBA00874B61 /* KYWaterWaveView.m in Sources */,
 				4D87A1C922C31FA700873D55 /* CommunityListCell.swift in Sources */,
 				4D1C339222C0ACEF003F931C /* CGFloat+Extensions.swift in Sources */,
 				4D106D1B22BBA4FE000EF71D /* TabBarController.m in Sources */,
@@ -697,6 +710,7 @@
 				4D106CF422BBA4DF000EF71D /* HomeViewController.m in Sources */,
 				4D106D1922BBA4FE000EF71D /* UIColor+ConvertColor.m in Sources */,
 				4D1C338922C0ACEF003F931C /* Int+Extensions.swift in Sources */,
+				4D43FCBA22C9EDC400874B61 /* SpeechRecognizerVC.swift in Sources */,
 				4D1C339022C0ACEF003F931C /* SKTAudio.swift in Sources */,
 				4D106D1422BBA4FE000EF71D /* FunctionViewController.m in Sources */,
 				4D106D1622BBA4FE000EF71D /* WBTool.m in Sources */,
