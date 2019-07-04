@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D106CF222BBA4DF000EF71D /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D106CEE22BBA4DE000EF71D /* HomeCell.m */; };
 		4D106CF322BBA4DF000EF71D /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D106CEF22BBA4DE000EF71D /* HomeDetailViewController.m */; };
 		4D106CF422BBA4DF000EF71D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D106CF122BBA4DF000EF71D /* HomeViewController.m */; };
 		4D106D1422BBA4FE000EF71D /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D106CF622BBA4FE000EF71D /* FunctionViewController.m */; };
@@ -46,6 +45,9 @@
 		4D43FCBA22C9EDC400874B61 /* SpeechRecognizerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCB822C9EDC400874B61 /* SpeechRecognizerVC.swift */; };
 		4D43FCBB22C9EDC400874B61 /* SpeechRecognizerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */; };
 		4D43FCBE22C9FBBA00874B61 /* KYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCBC22C9FBBA00874B61 /* KYWaterWaveView.m */; };
+		4D43FCC022CAE89300874B61 /* XNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCBF22CAE89300874B61 /* XNetwork.swift */; };
+		4D43FCC222CC3D8800874B61 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCC122CC3D8800874B61 /* HomeDataModel.swift */; };
+		4D43FCC422CC967E00874B61 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCC322CC967E00874B61 /* HomeCell.swift */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
@@ -93,8 +95,6 @@
 		2C27BC11FD44E49E8E2727CE /* Pods-ChienglishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChienglishTests.debug.xcconfig"; path = "Target Support Files/Pods-ChienglishTests/Pods-ChienglishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D106CEB22BBA4DE000EF71D /* Chienglish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chienglish-Bridging-Header.h"; sourceTree = "<group>"; };
 		4D106CEC22BBA4DE000EF71D /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
-		4D106CED22BBA4DE000EF71D /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		4D106CEE22BBA4DE000EF71D /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		4D106CEF22BBA4DE000EF71D /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		4D106CF022BBA4DF000EF71D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		4D106CF122BBA4DF000EF71D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -145,6 +145,9 @@
 		4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechRecognizerVC.xib; sourceTree = "<group>"; };
 		4D43FCBC22C9FBBA00874B61 /* KYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYWaterWaveView.m; sourceTree = "<group>"; };
 		4D43FCBD22C9FBBA00874B61 /* KYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYWaterWaveView.h; sourceTree = "<group>"; };
+		4D43FCBF22CAE89300874B61 /* XNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNetwork.swift; sourceTree = "<group>"; };
+		4D43FCC122CC3D8800874B61 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
+		4D43FCC322CC967E00874B61 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -251,8 +254,6 @@
 		4D106D2922BBA731000EF71D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4D106CED22BBA4DE000EF71D /* HomeCell.h */,
-				4D106CEE22BBA4DE000EF71D /* HomeCell.m */,
 				4D106CEC22BBA4DE000EF71D /* HomeDetailViewController.h */,
 				4D106CEF22BBA4DE000EF71D /* HomeDetailViewController.m */,
 				4D106CF022BBA4DF000EF71D /* HomeViewController.h */,
@@ -263,6 +264,8 @@
 				4D4AB8AA22BCBAB700162D73 /* LabelCell.xib */,
 				4D87A1C022C3130F00873D55 /* CommentCell.swift */,
 				4D87A1C122C3130F00873D55 /* CommentCell.xib */,
+				4D43FCC122CC3D8800874B61 /* HomeDataModel.swift */,
+				4D43FCC322CC967E00874B61 /* HomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				4D2BAE6B22C5EC9D00CEDC7F /* XSpeechControl.swift */,
 				4D43FCB822C9EDC400874B61 /* SpeechRecognizerVC.swift */,
 				4D43FCB922C9EDC400874B61 /* SpeechRecognizerVC.xib */,
+				4D43FCBF22CAE89300874B61 /* XNetwork.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -621,6 +625,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Chienglish/Pods-Chienglish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
@@ -630,6 +637,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KUIPopOver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
@@ -680,6 +690,7 @@
 				4D1C338E22C0ACEF003F931C /* CGPoint+Extensions.swift in Sources */,
 				4D106D1522BBA4FE000EF71D /* CenterViewController.m in Sources */,
 				4D2BAE6822C46DFC00CEDC7F /* MeVC.swift in Sources */,
+				4D43FCC022CAE89300874B61 /* XNetwork.swift in Sources */,
 				4D106D1A22BBA4FE000EF71D /* MineViewController.m in Sources */,
 				4D106D1722BBA4FE000EF71D /* CommunityViewController.m in Sources */,
 				4D1C338D22C0ACEF003F931C /* SKNode+Extensions.swift in Sources */,
@@ -691,16 +702,17 @@
 				4D1C339422C0B45F003F931C /* XReferenceVC.swift in Sources */,
 				4D2BAE6C22C5EC9D00CEDC7F /* XSpeechControl.swift in Sources */,
 				4D106D1822BBA4FE000EF71D /* UILabel+Size.m in Sources */,
-				4D106CF222BBA4DF000EF71D /* HomeCell.m in Sources */,
 				4D1C339822C0DF75003F931C /* PMSuperButton.swift in Sources */,
 				4D87A1D022C33F5D00873D55 /* ImageDisplayView.swift in Sources */,
 				4D43FCBE22C9FBBA00874B61 /* KYWaterWaveView.m in Sources */,
 				4D87A1C922C31FA700873D55 /* CommunityListCell.swift in Sources */,
+				4D43FCC222CC3D8800874B61 /* HomeDataModel.swift in Sources */,
 				4D1C339222C0ACEF003F931C /* CGFloat+Extensions.swift in Sources */,
 				4D106D1B22BBA4FE000EF71D /* TabBarController.m in Sources */,
 				4D1C338F22C0ACEF003F931C /* SKTEffects.swift in Sources */,
 				4D87A1C222C3130F00873D55 /* CommentCell.swift in Sources */,
 				4D2BAE6722C46DFC00CEDC7F /* MeItemCell.swift in Sources */,
+				4D43FCC422CC967E00874B61 /* HomeCell.swift in Sources */,
 				4D1C339A22C0E077003F931C /* NotiView.swift in Sources */,
 				4D106CF322BBA4DF000EF71D /* HomeDetailViewController.m in Sources */,
 				4D1C337922C0ACAE003F931C /* Convenient.swift in Sources */,

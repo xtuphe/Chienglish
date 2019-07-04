@@ -8,7 +8,6 @@
 
 #import "HomeDetailViewController.h"
 #import "Define.h"
-#import "HomeCell.h"
 #import "HomeViewController.h"
 #import "Tabbar.h"
 #import "Chienglish-Swift.h"
@@ -92,7 +91,7 @@
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*1.3)];
     
     self.headerImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*1.3);
-    self.headerImageView.image = [UIImage imageNamed:self.imageName];
+    self.headerImageView.image = self.image;
     [headerView addSubview:self.headerImageView];
     self.titleLabel.text =self.titles;
     self.titleTwoLabel.text = self.titleTwo;
@@ -262,7 +261,7 @@
     UIView *fromView = [fromVC valueForKeyPath:@"headerImageView"];
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
     HomeCell *cell = (HomeCell *)[toVC.tableView cellForRowAtIndexPath:self.selectIndexPath];
-    UIView *originView = cell.bgimageView;
+    UIView *originView = cell.bgImageView;
     
     UIView *snapShotView = [fromView snapshotViewAfterScreenUpdates:NO];
     snapShotView.layer.masksToBounds = YES;
@@ -368,6 +367,8 @@
     if (_headerImageView == nil) {
         _headerImageView = [[UIImageView alloc]init];
         _headerImageView.userInteractionEnabled = YES;
+        _headerImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _headerImageView.clipsToBounds = YES;
     }
     return _headerImageView;
 }

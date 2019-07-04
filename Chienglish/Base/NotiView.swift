@@ -10,13 +10,12 @@ import Foundation
 import UIKit
 import SwiftMessages
 
-func showMessage(name: String, content: String) {
+func showMessage(content: String, type:Theme) {
     let view = MessageView.viewFromNib(layout: .cardView)
     view.configureTheme(.info)
     view.configureDropShadow()
-    view.configureContent(title: name, body: content)
+    view.configureContent(title: "", body: content)
     view.button?.isHidden = true
     view.iconImageView?.isHidden = true
     SwiftMessages.show(view: view)
-    XSpeechControl.shared.synthesizer.pauseSpeaking(at: .word)
 }

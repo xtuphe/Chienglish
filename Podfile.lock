@@ -1,4 +1,8 @@
 PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - HandyJSON (5.0.0)
   - KUIPopOver (1.1.2)
   - Masonry (1.1.0)
   - SKPhotoBrowser (6.1.0)
@@ -7,6 +11,9 @@ PODS:
   - SwiftMessages/App (7.0.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - HandyJSON
   - KUIPopOver
   - Masonry
   - SKPhotoBrowser
@@ -14,17 +21,23 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - HandyJSON
     - KUIPopOver
     - Masonry
     - SKPhotoBrowser
     - SwiftMessages
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   KUIPopOver: fc7ccb3c1c1ada51f5251477a7993ec452e3eefb
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
 
-PODFILE CHECKSUM: 3c12c1a50f27530de3ae348e137981b670176370
+PODFILE CHECKSUM: 91bd5eee8303fba9e2bb3742545bb3ca931f85b5
 
 COCOAPODS: 1.6.1

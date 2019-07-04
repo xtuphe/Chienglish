@@ -10,6 +10,7 @@
 
 @interface HomeDetailViewController : UIViewController
 @property (strong, nonatomic) UIImage *bgImage;
+@property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *titles;
 @property (strong, nonatomic) NSString *titleTwo;

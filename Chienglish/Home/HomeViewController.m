@@ -8,16 +8,16 @@
 
 #import "HomeViewController.h"
 #import "Define.h"
-#import "HomeCell.h"
 #import "HomeDetailViewController.h"
 #import "TabBarController.h"
 #import "Tabbar.h"
+#import "Chienglish-Swift.h"
+#import <Alamofire/Alamofire-Swift.h>
+#import <AlamofireImage-Swift.h>
+
 @interface HomeViewController ()<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning,UITableViewDelegate,UITableViewDataSource>
 
-@property (strong, nonatomic) NSMutableArray *dataSource;       // 图片数组
-@property (strong, nonatomic) NSMutableArray *titles;           // 主标题数组
-@property (strong, nonatomic) NSMutableArray *titleTwos;        // 副标题数组
-@property (strong, nonatomic) NSMutableArray *contents;         // 内容数组
+@property (strong, nonatomic) NSMutableArray *data;         // 内容数组
 
 @property (strong, nonatomic) UIView *headerView;               // 头部
 @property (strong, nonatomic) UILabel *timeLabel;               // 时间
@@ -46,9 +46,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initData];
     [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = [self buildHeaderView];
+    self.data = [NSMutableArray new];
+    [self requestData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReceived:) name:@"homePageListData" object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+
+- (void)notiReceived:(NSNotification *)noti{
+    HomeDataModel * model = noti.object;
+    [self.data addObjectsFromArray:model.data];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Today 头像 UI
@@ -120,23 +132,6 @@
 #pragma mark - ==============================Data============================
 
 
-- (void)initData {
-    [self.dataSource addObjectsFromArray:@[@"test1",@"test2",@"test3"]];
-    
-    [self.titles addObject:@"哈弗H6Coupe震撼上市"];
-    [self.titles addObject:@"黑天鹅蛋糕 "];
-    [self.titles addObject:@"高端健身会所入驻园区"];
-    
-    [self.titleTwos addObject:@"体验“中国芯”动力新哈弗H6 Coupe"];
-    [self.titleTwos addObject:@"“我的一生，为美而感动，为美而存在”"];
-    [self.titleTwos addObject:@"让运动助力工作生活"];
-    
-    [self.contents addObject:@"The simulation hypothesis contends that reality is in fact a simulation (most likely a computer simulation), of which we, the simulants, are totally unaware. Some versions rely on the development of simulated reality, a fictional technology. The hypothesis has been a central plot device of many science fiction stories and films."];
-    [self.contents addObject:@"Many works of science fiction as well as some forecasts by serious technologists and futurologists predict that enormous amounts of computing power will be available in the future. Let us suppose for a moment that these predictions are correct. One thing that later generations might do with their super-powerful computers is run detailed simulations of their forebears or of people like their forebears. Because their computers would be so powerful, they could run a great many such simulations. Suppose that these simulated people are conscious (as they would be if the simulations were sufficiently fine-grained and if a certain quite widely accepted position in the philosophy of mind is correct). Then it could be the case that the vast majority of minds like ours do not belong to the original race but rather to people simulated by the advanced descendants of an original race."];
-    [self.contents addObject:@"黑天鹅 \n隶属于北京黑天鹅餐饮管理有限公司，公司主要打造国内品质卓越，美味安心的蛋糕。黑天鹅蛋糕源于黄金比例的配方，精选世界各地优质食材，让您和朋友轻松享受精品蛋糕。\n用新锐的艺术理念和国际化的视野，带领团队重塑品牌，开启了黑天鹅与全球顶尖的甜品大师、设计大师和顶级原料商全面合作的阶段，让黑天鹅的产品和形象获得蜕变和飞跃，迅速跻身于国际一流烘焙品牌的行列。\n黑天鹅蛋糕推出以来，一直以一种“昂贵、奢华、精美”的形象示人，北京的首家实体店铺，自然要延续这个风格。先站在门口拍一张，这种风格的铺面，在蛋糕店里绝对令人耳目一新。"];
-
-}
-
 
 
 #pragma mark - ==============================Delegate============================
@@ -155,21 +150,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return self.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HOMECELLID"];
     if (cell == nil) {
-        cell = [[HomeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HOMECELLID"];
+        cell = [[HomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HOMECELLID"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.shouldGroupAccessibilityChildren = YES;
     }
-    cell.titleLabel.text = self.titles[indexPath.row];
-    cell.contentLabel.text = self.titleTwos[indexPath.row];
-    cell.bgimageView.image = [UIImage imageNamed:self.dataSource[indexPath.row]];
+    HomeArticleModel *model = self.data[indexPath.row];
+    [cell reloadWithModel:model];
     cell.transform = CGAffineTransformMakeScale(1, 1);
-    
     return cell;
     
 }
@@ -202,15 +195,19 @@
     HomeCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.transform = CGAffineTransformMakeScale(0.9, 0.9);
     HomeDetailViewController *detail = [[HomeDetailViewController alloc]init];
+    HomeArticleModel *model = self.data[indexPath.row];
     detail.selectIndexPath = indexPath;
     detail.bgImage = [self imageFromView];
-    detail.titles = self.titles[indexPath.row];
-    detail.titleTwo = self.titleTwos[indexPath.row];
-    detail.content = self.contents[indexPath.row];
-    detail.imageName = self.dataSource[indexPath.row];
+    detail.titles = model.title;
+    detail.titleTwo = model.subtitle;
+    detail.content = model.content;
+    detail.image = cell.bgImageView.image;
     [self.navigationController pushViewController:detail animated:YES];
 }
 
+- (void)requestData {
+    [XNetwork homePageListWithParam:@"page=1"];
+}
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 // MARK: 设置代理
@@ -230,7 +227,7 @@
     UIView *toView = [toVC valueForKeyPath:@"headerImageView"];
     UIView *fromView = cell.bgView;
     UIView *containerView = [transitionContext containerView];
-    UIView *snapShotView = [[UIImageView alloc]initWithImage:cell.bgimageView.image];
+    UIView *snapShotView = [[UIImageView alloc]initWithImage:cell.bgImageView.image];
     snapShotView.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
     
     fromView.hidden = YES;
@@ -251,6 +248,7 @@
     contentLabel.textAlignment = NSTextAlignmentLeft;
     contentLabel.alpha = 0.5;
     contentLabel.text =cell.contentLabel.text;
+    contentLabel.numberOfLines = 0;
     [snapShotView addSubview:titleLabel];
     [snapShotView addSubview:contentLabel];
     [containerView addSubview:toVC.view];
@@ -296,13 +294,6 @@
     return _tableView;
 }
 
-- (NSMutableArray *)dataSource {
-    if (_dataSource == nil) {
-        _dataSource = [[NSMutableArray alloc]init];
-    }
-    return _dataSource;
-}
-
 - (UIView *)headerView {
     if (_headerView == nil) {
         _headerView = [[UIView alloc]init];
@@ -339,27 +330,6 @@
         _userButton.backgroundColor = COLOR_CLEAR;
     }
     return _userButton;
-}
-
-- (NSMutableArray *)titles {
-    if (_titles == nil) {
-        _titles = [[NSMutableArray alloc]init];
-    }
-    return _titles;
-}
-
-- (NSMutableArray *)titleTwos {
-    if (_titleTwos == nil) {
-        _titleTwos = [[NSMutableArray alloc]init];
-    }
-    return _titleTwos;
-}
-
-- (NSMutableArray *)contents {
-    if (_contents == nil) {
-        _contents = [[NSMutableArray alloc]init];
-    }
-    return _contents;
 }
 
 @end

@@ -11,6 +11,9 @@ target 'Chienglish' do
   #  pod 'ReactiveCocoa'
   pod 'SKPhotoBrowser'
   pod 'Masonry'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'HandyJSON'
   
   target 'ChienglishTests' do
     inherit! :search_paths
