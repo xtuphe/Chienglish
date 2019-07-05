@@ -10,6 +10,8 @@ import UIKit
 
 class CommunityListVC: UITableViewController {
 
+    var data = Array<CommunityDetailModel>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +22,22 @@ class CommunityListVC: UITableViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.borderColor = .lightGray
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor : UIColor.white]
+        requestData(page: 1)
     }
-
+    
+    func requestData(page : Int) {
+        XNetwork .request(url: "api/userSource", param: nil) { (success, dic) in
+            if success {
+                if let model = CommunityDataModel.deserialize(from: dic) {
+                    if model.data.count > 0 {
+                        self.data.append(contentsOf: model.data)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,15 +46,18 @@ class CommunityListVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 2
+        return data.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommunityListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommunityListCell", for: indexPath) as! CommunityListCell
+        let model = self.data[indexPath.row]
+        cell.contentTextView.text = model.content
+        cell.buttonsView.button0.setTitle(String(model.love), for: .normal)
+        cell.buttonsView.button1.setTitle(String(model.delove), for: .normal)
+        cell.buttonsView.button2.setTitle(String(model.store_num), for: .normal)
         
-
         return cell
     }
     

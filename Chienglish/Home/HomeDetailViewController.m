@@ -256,6 +256,7 @@
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     
     HomeViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    [toVC.tableView scrollToRowAtIndexPath:self.selectIndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     HomeDetailViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIView *containerView = [transitionContext containerView];
     UIView *fromView = [fromVC valueForKeyPath:@"headerImageView"];
@@ -376,6 +377,8 @@
 - (UIImageView *)bgImageView {
     if (_bgImageView == nil) {
         _bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+        _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _bgImageView.clipsToBounds = YES;
     }
     return _bgImageView;
 }

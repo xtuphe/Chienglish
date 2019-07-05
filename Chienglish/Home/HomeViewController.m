@@ -227,9 +227,10 @@
     UIView *toView = [toVC valueForKeyPath:@"headerImageView"];
     UIView *fromView = cell.bgView;
     UIView *containerView = [transitionContext containerView];
-    UIView *snapShotView = [[UIImageView alloc]initWithImage:cell.bgImageView.image];
+    UIImageView *snapShotView = [[UIImageView alloc]initWithImage:cell.bgImageView.image];
     snapShotView.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
-    
+    snapShotView.contentMode = UIViewContentModeScaleAspectFill;
+    snapShotView.clipsToBounds = YES;
     fromView.hidden = YES;
     
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];

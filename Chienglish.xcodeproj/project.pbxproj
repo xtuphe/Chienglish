@@ -48,6 +48,7 @@
 		4D43FCC022CAE89300874B61 /* XNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCBF22CAE89300874B61 /* XNetwork.swift */; };
 		4D43FCC222CC3D8800874B61 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCC122CC3D8800874B61 /* HomeDataModel.swift */; };
 		4D43FCC422CC967E00874B61 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCC322CC967E00874B61 /* HomeCell.swift */; };
+		4D43FCC622CDA47C00874B61 /* CommunityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43FCC522CDA47C00874B61 /* CommunityDataModel.swift */; };
 		4D4AB8A722BC7BBA00162D73 /* WordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */; };
 		4D4AB8A822BC7BBA00162D73 /* WordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */; };
 		4D4AB8AB22BCBAB700162D73 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4AB8A922BCBAB700162D73 /* LabelCell.swift */; };
@@ -148,6 +149,7 @@
 		4D43FCBF22CAE89300874B61 /* XNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNetwork.swift; sourceTree = "<group>"; };
 		4D43FCC122CC3D8800874B61 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		4D43FCC322CC967E00874B61 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		4D43FCC522CDA47C00874B61 /* CommunityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDataModel.swift; sourceTree = "<group>"; };
 		4D4AB8A522BC7BBA00162D73 /* WordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextCell.swift; sourceTree = "<group>"; };
 		4D4AB8A622BC7BBA00162D73 /* WordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTextCell.xib; sourceTree = "<group>"; };
 		4D4AB8A922BCBAB700162D73 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				4D87A1CD22C320BB00873D55 /* CommunityButtonsView.xib */,
 				4D87A1CF22C33F5D00873D55 /* ImageDisplayView.swift */,
 				4D87A1D122C34A9400873D55 /* ImageDisplayView4.xib */,
+				4D43FCC522CDA47C00874B61 /* CommunityDataModel.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				4D1C338822C0ACEF003F931C /* CGVector+Extensions.swift in Sources */,
 				4D106D1C22BBA4FE000EF71D /* Tabbar.m in Sources */,
 				4D87A1C622C31D6600873D55 /* CommunityListVC.swift in Sources */,
+				4D43FCC622CDA47C00874B61 /* CommunityDataModel.swift in Sources */,
 				4D1C338A22C0ACEF003F931C /* SKTTimingFunctions.swift in Sources */,
 				4D1C339622C0DF3E003F931C /* IBInspectable.swift in Sources */,
 				4DC736A022B1ED7E0040FF0D /* WordTextView.swift in Sources */,

@@ -12,32 +12,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommunityButtonsView" customModule="Chienglish" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="73"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-vn-IfJ" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="107"/>
-                    <state key="normal" title="Like">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-vn-IfJ" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="107" height="73"/>
+                    <state key="normal" title="Like" image="like">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="imageViewContentMode">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="button0Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="wZ3-S5-V3x"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-VO-XxA" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
-                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="107"/>
-                    <state key="normal" title="Dislike">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-VO-XxA" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="107" y="0.0" width="107" height="73"/>
+                    <state key="normal" title="Dislike" image="dislike">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="checkboxButton" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="button1Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="gda-fq-iof"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-V3-hnO" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
-                    <rect key="frame" x="207" y="0.0" width="103.5" height="107"/>
-                    <state key="normal" title="Comment">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-V3-hnO" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
+                    <rect key="frame" x="214" y="0.0" width="107" height="73"/>
+                    <state key="normal" title="Comment" image="favo">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="button2Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="XcF-A4-HFW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-W9-2If" customClass="PMSuperButton" customModule="Chienglish" customModuleProvider="target">
-                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="107"/>
+                    <rect key="frame" x="321" y="0.0" width="107" height="73"/>
                     <state key="normal" title="举报">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="button3Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="7L8-aa-O3k"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +81,18 @@
                 <constraint firstItem="ewH-V3-hnO" firstAttribute="width" secondItem="UZC-vn-IfJ" secondAttribute="width" id="xgw-gR-vkE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="137.68115942028987" y="-25.111607142857142"/>
+            <connections>
+                <outlet property="button0" destination="UZC-vn-IfJ" id="ves-tb-LCn"/>
+                <outlet property="button1" destination="5EN-VO-XxA" id="HRg-1E-ukU"/>
+                <outlet property="button2" destination="ewH-V3-hnO" id="M6I-a4-ml2"/>
+                <outlet property="button3" destination="eO4-W9-2If" id="D71-3f-0Ho"/>
+            </connections>
+            <point key="canvasLocation" x="147.82608695652175" y="-13.727678571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="dislike" width="32" height="32"/>
+        <image name="favo" width="32" height="32"/>
+        <image name="like" width="32" height="32"/>
+    </resources>
 </document>

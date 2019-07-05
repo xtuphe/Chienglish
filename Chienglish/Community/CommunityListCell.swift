@@ -10,11 +10,14 @@ import UIKit
 
 class CommunityListCell: UITableViewCell {
     @IBOutlet weak var buttonsViewBase: UIView!
-    
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameButton: UIButton!
+    @IBOutlet weak var contentTextView: WordTextView!
+    let buttonsView = CommunityButtonsView.loadFromNib(nibName: "CommunityButtonsView")! as! CommunityButtonsView
+
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        let buttonsView = CommunityButtonsView.loadFromNib(nibName: "CommunityButtonsView")!
         buttonsViewBase.addSubview(buttonsView)
         buttonsView.mas_makeConstraints({ (make) in
             make?.top.leading()?.bottom()?.trailing()?.mas_equalTo()(buttonsViewBase)?.offset()(0)
