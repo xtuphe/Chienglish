@@ -26,24 +26,27 @@ class HomeCell: UITableViewCell {
         bgView = UIView.init(frame: CGRect.init(x: 20, y: 0, width: screenWidth() - 40, height: (screenWidth() - 40) * 1.3 + 25))
         bgView.backgroundColor = .clear
         
-        titleLabel = UILabel.init(frame: CGRect.init(x: 15, y: 20, width: screenWidth() - 30, height: 100))
+        titleLabel = UILabel.init(frame: CGRect.init(x: 15, y: 15, width: screenWidth() - 30, height: 100))
         titleLabel.textColor = .white
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 0
         titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
         titleLabel.lineBreakMode = .byClipping
+        titleLabel.layer.shadowColor = UIColor.black.cgColor
+        titleLabel.layer.shadowOffset = CGSize.init(width: 3, height: 3)
+        titleLabel.layer.shadowRadius = 5
+        titleLabel.layer.shadowOpacity = 1
         
         contentLabel = UILabel.init(frame: CGRect.init(x: 15, y: (screenWidth() - 40) * 1.3 - 120, width: screenWidth() - 60, height: 100))
         contentLabel.font = UIFont.systemFont(ofSize: 15)
         contentLabel.textColor = .white
-        contentLabel.alpha = 0.5
         contentLabel.textAlignment = .left
         contentLabel.numberOfLines = 0
         contentLabel.lineBreakMode = .byTruncatingHead
         contentLabel.layer.shadowColor = UIColor.black.cgColor
         contentLabel.layer.shadowOffset = CGSize.init(width: 3, height: 3)
         contentLabel.layer.shadowRadius = 5
-        contentLabel.layer.shadowOpacity = 0.8
+        contentLabel.layer.shadowOpacity = 1
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
@@ -56,7 +59,7 @@ class HomeCell: UITableViewCell {
     
     @objc func reload(model : HomeArticleModel) {
         titleLabel.text = "\(model.title)\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-        contentLabel.text = "\(model.content)"
+        contentLabel.text = "\(model.subtitle)"
         let url = model.img
         bgImageView.af_setImage(withURL: URL(string: url)!)
     }

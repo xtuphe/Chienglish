@@ -11,6 +11,9 @@
 #import "WBTool.h"
 
 
+#define WEAK_SELF __weak __typeof__(self) weakSelf = self;
+#define STRONG_SELF __strong __typeof(self) self = weakSelf;
+
 #pragma mark - 坐标
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width

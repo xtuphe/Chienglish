@@ -6,14 +6,15 @@ target 'Chienglish' do
   use_frameworks!
 
   #  pod 'FLEX'
+  #  pod 'ReactiveCocoa'
   pod 'SwiftMessages'
   pod 'KUIPopOver'
-  #  pod 'ReactiveCocoa'
   pod 'SKPhotoBrowser'
   pod 'Masonry'
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'HandyJSON'
+  pod 'MJRefresh'
   
   target 'ChienglishTests' do
     inherit! :search_paths

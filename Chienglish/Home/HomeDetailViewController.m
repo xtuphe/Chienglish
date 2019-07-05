@@ -18,7 +18,7 @@
 @property (strong, nonatomic) UILabel *contentLabel;        // 内容
 @property (strong, nonatomic) UIImageView *headerImageView; // 大图
 @property (strong, nonatomic) UILabel *titleLabel;          // 主标题
-@property (strong, nonatomic) UILabel *titleTwoLabel;       // 副标题
+@property (strong, nonatomic) UILabel *subTitleLabel;       // 副标题
 @end
 
 
@@ -94,9 +94,9 @@
     self.headerImageView.image = self.image;
     [headerView addSubview:self.headerImageView];
     self.titleLabel.text =self.titles;
-    self.titleTwoLabel.text = self.titleTwo;
+    self.subTitleLabel.text = self.titleTwo;
     [headerView addSubview:self.titleLabel];
-    [headerView addSubview:self.titleTwoLabel];
+    [headerView addSubview:self.subTitleLabel];
     return headerView;
 }
 
@@ -155,9 +155,9 @@
         rectT.origin.y = scrollView.contentOffset.y+30;
         _titleLabel.frame = rectT;
         
-        CGRect rectC = _titleTwoLabel.frame;
+        CGRect rectC = _subTitleLabel.frame;
         rectC.origin.y = scrollView.contentOffset.y +SCREEN_WIDTH*1.3-30;
-        _titleTwoLabel.frame = rectC;
+        _subTitleLabel.frame = rectC;
     }
 }
 
@@ -334,23 +334,35 @@
 
 - (UILabel *)titleLabel {
     if (_titleLabel == nil) {
-        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(22, 30, SCREEN_WIDTH-30, 30)];
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(22, 30, SCREEN_WIDTH-30, 100)];
         _titleLabel.textColor = COLOR_WHITE;
         _titleLabel.textAlignment = NSTextAlignmentLeft;
+        _titleLabel.numberOfLines = 0;
         _titleLabel.font = FONT_B(25);
+        _titleLabel.lineBreakMode = NSLineBreakByClipping;
+        _titleLabel.layer.shadowColor = UIColor.blackColor.CGColor;
+        _titleLabel.layer.shadowOffset = CGSizeMake(3, 3);
+        _titleLabel.layer.shadowRadius = 5;
+        _titleLabel.layer.shadowOpacity = 1;
     }
     return _titleLabel;
 }
 
-- (UILabel *)titleTwoLabel {
-    if (_titleTwoLabel == nil) {
-        _titleTwoLabel = [[UILabel alloc]initWithFrame:CGRectMake(22, SCREEN_WIDTH*1.3-30, SCREEN_WIDTH*1.3-44, 15)];
-        _titleTwoLabel.font = FONT_PF(15);
-        _titleTwoLabel.textColor = COLOR_WHITE;
-        _titleTwoLabel.alpha = 0.5;
-        _titleTwoLabel.textAlignment = NSTextAlignmentLeft;
+- (UILabel *)subTitleLabel {
+    if (_subTitleLabel == nil) {
+        _subTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(22, SCREEN_WIDTH*1.3-30, SCREEN_WIDTH*1.3-44, 15)];
+        _subTitleLabel.font = FONT_PF(15);
+        _subTitleLabel.textColor = COLOR_WHITE;
+        _subTitleLabel.alpha = 0.5;
+        _subTitleLabel.textAlignment = NSTextAlignmentLeft;
+        _subTitleLabel.lineBreakMode = NSLineBreakByTruncatingHead;
+        _subTitleLabel.layer.shadowColor = UIColor.blackColor.CGColor;
+        _subTitleLabel.layer.shadowOffset = CGSizeMake(3, 3);
+        _subTitleLabel.layer.shadowRadius = 5;
+        _subTitleLabel.layer.shadowOpacity = 1;
+        
     }
-    return _titleTwoLabel;
+    return _subTitleLabel;
 }
 
 - (UILabel *)contentLabel {

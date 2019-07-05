@@ -14,7 +14,11 @@ class CommunityListVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupViews()
+        requestData(page: 1)
+    }
+    
+    func setupViews() {
         tableView.register(UINib.init(nibName: "CommunityListCell", bundle: nil), forCellReuseIdentifier: "CommunityListCell")
         tableView.backgroundColor = .black
         navigationController?.navigationBar.barTintColor = .black
@@ -22,7 +26,6 @@ class CommunityListVC: UITableViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.borderColor = .lightGray
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor : UIColor.white]
-        requestData(page: 1)
     }
     
     func requestData(page : Int) {
@@ -41,7 +44,6 @@ class CommunityListVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 

@@ -26,7 +26,8 @@
     [super viewDidLoad];
     
     // 首页
-    HomeViewController *homeVC = [[HomeViewController alloc]init];
+    HomeListVC *homeVC = [[HomeListVC alloc] init];
+//    HomeViewController *homeVC = [[HomeViewController alloc]init];
     [self setViewController:homeVC title:@"首页" image:@"TB_home_normal" selectImage:@"TB_home_press"];
     // 功能
     CommunityListVC *funcVC = [[CommunityListVC alloc]init];

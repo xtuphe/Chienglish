@@ -12,8 +12,7 @@
 #import "TabBarController.h"
 #import "Tabbar.h"
 #import "Chienglish-Swift.h"
-#import <Alamofire/Alamofire-Swift.h>
-#import <AlamofireImage-Swift.h>
+#import <MJRefresh/MJRefresh.h>
 
 @interface HomeViewController ()<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning,UITableViewDelegate,UITableViewDataSource>
 
@@ -23,6 +22,7 @@
 @property (strong, nonatomic) UILabel *timeLabel;               // 时间
 @property (strong, nonatomic) UILabel *titleLabel;              // Today
 @property (strong, nonatomic) UIButton *userButton;             //
+@property NSInteger refreshingState; //0 结束 1 header 2 footer
 
 @end
 
@@ -49,7 +49,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = [self buildHeaderView];
     self.data = [NSMutableArray new];
-    [self requestData];
+    [self setupMjRefresh];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReceived:) name:@"homePageListData" object:nil];
 }
 
@@ -58,9 +58,64 @@
 }
 
 - (void)notiReceived:(NSNotification *)noti{
-    HomeDataModel * model = noti.object;
-    [self.data addObjectsFromArray:model.data];
-    [self.tableView reloadData];
+    if ([noti.name isEqualToString:@"homePageListData"]) {
+        if (self.refreshingState == 1) {
+            HomeDataModel * model = noti.object;
+            self.data = [[NSMutableArray alloc] initWithArray:model.data];
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
+        }
+        if (self.refreshingState == 2) {
+            HomeDataModel * model = noti.object;
+            [self.data addObjectsFromArray:model.data];
+            if (model.data.count < 10) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            } else {
+                [self.tableView.mj_footer endRefreshing];
+            }
+            [self.tableView reloadData];
+        }
+    }
+}
+
+- (void)setupMjRefresh {
+    WEAK_SELF
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        STRONG_SELF
+        if ([self.tableView.mj_footer isRefreshing]) {
+            return;
+        }
+        self.refreshingState = 1;
+        [self requestData];
+    }];
+    
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSInteger i = 0; i < 29; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"loading%ld.png", i]];
+        if (image) {
+            [result addObject:image];
+        }
+    }
+    [header setImages:@[result[0]] forState:MJRefreshStateIdle];
+    [header setImages:result duration:1 forState:MJRefreshStatePulling];
+    [header setImages:result duration:1 forState:MJRefreshStateRefreshing];
+    header.stateLabel.hidden = YES;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    
+    MJRefreshAutoGifFooter *footer = [MJRefreshAutoGifFooter footerWithRefreshingBlock:^{
+        STRONG_SELF
+        if ([self.tableView.mj_header isRefreshing]) {
+            return;
+        }
+        self.refreshingState = 2;
+        [self requestData];
+    }];
+    [footer setImages:@[result[0]] forState:MJRefreshStateIdle];
+    [footer setImages:result duration:1 forState:MJRefreshStatePulling];
+    [footer setImages:result duration:1 forState:MJRefreshStateRefreshing];
+    footer.stateLabel.hidden = YES;
+    self.tableView.mj_footer = footer;
 }
 
 #pragma mark - Today 头像 UI
@@ -226,7 +281,9 @@
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *toView = [toVC valueForKeyPath:@"headerImageView"];
     UIView *fromView = cell.bgView;
+    
     UIView *containerView = [transitionContext containerView];
+    
     UIImageView *snapShotView = [[UIImageView alloc]initWithImage:cell.bgImageView.image];
     snapShotView.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
     snapShotView.contentMode = UIViewContentModeScaleAspectFill;
@@ -290,6 +347,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = COLOR_CLEAR;
+        _tableView.showsVerticalScrollIndicator = NO;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
